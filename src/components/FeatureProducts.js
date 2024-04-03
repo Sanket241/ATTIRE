@@ -6,7 +6,7 @@ import Product from './Product';
 const FeatureProducts = () => {
     const { isLoading, featureProducts } = useGlobalProductContext();
     if (isLoading) {
-        return <div>.............Loading</div>
+        return <div className='page_loading'>Loading</div>
     }
     return (
         <Wrapper className="section">
