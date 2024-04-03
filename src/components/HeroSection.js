@@ -3,38 +3,39 @@ import styled from "styled-components";
 import { Button } from "../styles/Button";
 
 const HeroSection = ({ myData }) => {
-    const { name } = myData;
+  const { name } = myData;
 
-    return (
-        <Wrapper>
-            <div className="container">
-                <div className="grid grid-two-column">
-                    <div className="hero-section-data">
-                        <p className="intro-data">Welcome to </p>
-                        <h1> {name} </h1>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
-                            atque temporibus veniam doloribus libero ad error omnis voluptates
-                            animi! Suscipit sapiente.
-                        </p>
-                        <NavLink>
-                            <Button>show now</Button>
-                        </NavLink>
-                    </div>
-                    {/* our homepage image  */}
-                    <div className="hero-section-image">
-                        <figure>
-                            <img
-                                src="images/hero.jpg"
-                                alt="hero-section-photo"
-                                className="img-style"
-                            />
-                        </figure>
-                    </div>
-                </div>
-            </div>
-        </Wrapper>
-    );
+  return (
+    <Wrapper>
+      <div className="container">
+        <div className="grid grid-two-column">
+          <div className="hero-section-data">
+            <p className="intro-data">Welcome to </p>
+            <h1> {name} </h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
+              atque temporibus veniam doloribus libero ad error omnis voluptates
+              animi! Suscipit sapiente.
+            </p>
+            <NavLink>
+              <Button>show now</Button>
+            </NavLink>
+          </div>
+          {/* our homepage image  */}
+          <div className="hero-section-image">
+            <figure>
+              <img
+                src="images/hero2.jpg"
+                alt="hero-section-photo"
+                className="img-style"
+                border-radius="18px"
+              />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </Wrapper>
+  );
 };
 
 const Wrapper = styled.section`
@@ -74,7 +75,8 @@ const Wrapper = styled.section`
       content: "";
       width: 60%;
       height: 80%;
-      background-color: rgba(81, 56, 238, 0.4);
+      background: rgb(127,69,166);
+      background: linear-gradient(90deg, rgba(127,69,166,1) 0%, rgba(224,113,113,1) 100%, rgba(222,161,75,1) 100%);
       position: absolute;
       left: 50%;
       top: -5rem;
