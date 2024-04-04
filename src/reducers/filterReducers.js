@@ -1,11 +1,22 @@
 const filterReducers = (state, action) => {
   switch (action.type) {
     case "LOAD_FILTER_PRODUCTS":
+
+      //this is use of price array
+      let priceArray = action.payload.map((curElem) => {
+        return curElem.price;
+      }
+      );
+
+      let maxPrice = Math.max(...priceArray);
+
       return {
         ...state,
         // copy le rha hu filter_products ka original ke sath nhi khel rha hu
         filter_products: [...action.payload],
         all_products: [...action.payload],
+        filters: { ...state.filters, maxPrice, price: maxPrice},
+
       };
 
     case "SET_GRID_VIEW":
@@ -91,7 +102,7 @@ const filterReducers = (state, action) => {
       let { all_products } = state;
       let tempFilterProduct = [...all_products];
 
-      const { text, category, company, color} = state.filters;
+      const { text, category, company, color, price } = state.filters;
 
       if (text) {
         tempFilterProduct = tempFilterProduct.filter((curElem) => {
@@ -107,6 +118,10 @@ const filterReducers = (state, action) => {
         tempFilterProduct = tempFilterProduct.filter(
           (curElem) => curElem.company.toLowerCase() === company.toLowerCase()
         );
+      }
+      if(price){
+        tempFilterProduct = tempFilterProduct.filter(
+          (curElem) => curElem.price <= price);
       }
       // if (colors) {
       //   tempFilterProduct = tempFilterProduct.filter((curElem) =>
