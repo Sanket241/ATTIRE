@@ -1,21 +1,31 @@
 const filterReducers = (state, action) => {
   switch (action.type) {
     case "LOAD_FILTER_PRODUCTS":
+      let priceArr = action.payload.map((curElem) => curElem.price);
+     
 
-      //this is use of price array
-      let priceArray = action.payload.map((curElem) => {
-        return curElem.price;
-      }
-      );
+      // 1way
+      // console.log(Math.max.apply(null, priceArr));
 
-      let maxPrice = Math.max(...priceArray);
+      // let maxPrice = priceArr.reduce(
+      //   (initialVal, curVal) => Math.max(initialVal, curVal),
+      //   0
+      // );
+      // console.log(
+      //   "🚀 ~ file: filterReducer.js ~ line 16 ~ filterReducer ~ maxPrice",
+      //   maxPrice
+      // );
+
+      let maxPrice = Math.max(...priceArr);
+  
+    
 
       return {
         ...state,
         // copy le rha hu filter_products ka original ke sath nhi khel rha hu
         filter_products: [...action.payload],
         all_products: [...action.payload],
-        filters: { ...state.filters, maxPrice, price: maxPrice},
+        filters: { ...state.filters, maxPrice, price: maxPrice },
 
       };
 
@@ -114,18 +124,24 @@ const filterReducers = (state, action) => {
           (curElem) => curElem.category === category
         );
       }
+      if (color !== "all") {
+        tempFilterProduct = tempFilterProduct.filter((curElem) =>
+          curElem.colors.includes(color)
+        );
+      }
       if (company !== "all") {
         tempFilterProduct = tempFilterProduct.filter(
           (curElem) => curElem.company.toLowerCase() === company.toLowerCase()
         );
       }
-      if(price === 0){
+      if (price === 0) {
         tempFilterProduct = tempFilterProduct.filter(
-          (curElem) => curElem.price == price);
-      }
-      else{
+          (curElem) => curElem.price === price
+        );
+      } else {
         tempFilterProduct = tempFilterProduct.filter(
-          (curElem) => curElem.price <= price);
+          (curElem) => curElem.price <= price
+        );
       }
       // if (colors) {
       //   tempFilterProduct = tempFilterProduct.filter((curElem) =>
@@ -137,6 +153,20 @@ const filterReducers = (state, action) => {
         filter_products: tempFilterProduct,
       };
 
+      case "CLEAR_FILTERS":
+      return {
+        ...state,
+        filters: {
+          ...state.filters,
+          text: "",
+          category: "all",
+          company: "all",
+          color: "all",
+          maxPrice: 0,
+          price: state.filters.maxPrice,
+          minPrice: state.filters.maxPrice,
+        },
+      };
 
     default:
       return state;

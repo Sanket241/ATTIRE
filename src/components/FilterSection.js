@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useFilterContext } from "../context/filterContext";
-// import { FaCheck } from "react-icons/fa";
-import FormatPrice   from "../helpers/FormatPrice";
+import { FaCheck } from "react-icons/fa";
+import FormatPrice from "../helpers/FormatPrice";
 import { Button } from "../styles/Button";
 const FilterSection = () => {
   const {
@@ -17,22 +17,17 @@ const FilterSection = () => {
       return curElem[attr];
     });
 
-    // if (attr === "colors") {
-    //   // return (newVal = ["all", ...new Set([].concat(...newVal))]);
-    //   return[...new Set([].concat(...newVal))];
-    // }
-    // else{
-    //   newVal = newVal.flat();
-
-    // }
+    if (attr === "colors") {
+      // return (newVal = ["All", ...new Set([].concat(...newVal))]);
+      newVal = newVal.flat();
+    }
 
     return (newVal = ["all", ...new Set(newVal)]);
   };
-
   // we need to have the individual data of each in an array format
   const categoryData = getUniqueData(all_products, "category");
   const companyData = getUniqueData(all_products, "company");
-  // const colorsData = getUniqueData(all_products, "colors");
+  const colorsData = getUniqueData(all_products, "colors");
 
   return (
     <Wrapper>
@@ -87,7 +82,7 @@ const FilterSection = () => {
         </form>
       </div>
 
-      {/* <div className="filter-colors colors">
+      <div className="filter-colors colors">
         <h3>Colors</h3>
 
         <div className="filter-color-style">
@@ -119,7 +114,7 @@ const FilterSection = () => {
             );
           })}
         </div>
-      </div> */}
+      </div>
 
       <div className="filter_price">
         <h3>Price</h3>
