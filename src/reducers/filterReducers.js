@@ -119,7 +119,11 @@ const filterReducers = (state, action) => {
           (curElem) => curElem.company.toLowerCase() === company.toLowerCase()
         );
       }
-      if(price){
+      if(price === 0){
+        tempFilterProduct = tempFilterProduct.filter(
+          (curElem) => curElem.price == price);
+      }
+      else{
         tempFilterProduct = tempFilterProduct.filter(
           (curElem) => curElem.price <= price);
       }
