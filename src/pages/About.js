@@ -1,6 +1,6 @@
 import React from 'react'
-import HeroSection from './components/HeroSection'
-import { useGlobalProductContext } from './context/productContext';
+import HeroSection from '../components/HeroSection'
+import { useGlobalProductContext } from '../context/productContext';
 
 const About = () => {
   const {myName} = useGlobalProductContext();

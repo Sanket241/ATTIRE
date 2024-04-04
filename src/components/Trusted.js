@@ -9,21 +9,21 @@ const Trusted = () => {
 
           <div className="slide">
             <img
-              src="https://purepng.com/public/uploads/large/purepng.com-ibm-logologobrand-logoiconslogos-251519939176ka7y8.png"
+              src="https://nvidia.wd5.myworkdayjobs.com/wday/cxs/nvidia/NVIDIAExternalCareerSite/sidebarimage/e64d788b7b8d01e4c34e99996322ec00"
               alt="trusted-brands"
               height="50px"
             />
           </div>
           <div className="slide">
             <img
-              src="https://cdn.pixabay.com/photo/2021/08/10/16/02/amazon-6536326_960_720.png"
+              src="https://cionews.co.in/wp-content/uploads/2022/05/Microsoft-Logo.png"
               alt="trusted-brands"
 
             />
           </div>
           <div className="slide">
             <img
-              src="https://static.vecteezy.com/system/resources/thumbnails/031/737/227/small/twitter-new-logo-twitter-icons-new-twitter-logo-x-2023-x-social-media-icon-free-png.png"
+              src="https://miro.medium.com/v2/resize:fit:1400/1*GRhcmiHwrJkIv2024vIh2A.png"
               alt="trusted-brands"
             />
           </div>
@@ -35,10 +35,11 @@ const Trusted = () => {
           </div>
           <div className="slide">
             <img
-              src="https://1000logos.net/wp-content/uploads/2021/05/Coca-Cola-logo.png"
+              src="https://ik.imagekit.io/kkbzr2uz4cp/stock/nse/tcs.png"
               alt="trusted-brands"
             />
           </div>
+
         </div>
       </div>
     </Wrapper>

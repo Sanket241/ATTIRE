@@ -20,7 +20,6 @@ const Product = (curElem) => {
                 </div>
             </div>
         </div>
-
     </NavLink>
   )
 }

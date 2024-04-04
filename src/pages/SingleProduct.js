@@ -1,15 +1,15 @@
 import { useEffect } from "react";
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
-import { useGlobalProductContext } from "./context/productContext";
-import PageNavigation from "./components/PageNavigation";
-import MyImage from "./components/MyImage";
-import { Container } from "./styles/Container";
-import FormatPrice from "./helpers/FormatPrice";
+import { useGlobalProductContext } from "../context/productContext";
+import PageNavigation from "../components/PageNavigation";
+import MyImage from "../components/MyImage";
+import { Container } from "../styles/Container";
+import FormatPrice from "../helpers/FormatPrice";
 import { MdSecurity } from "react-icons/md";
 import { TbTruckDelivery, TbReplace } from "react-icons/tb";
-import Star from "./components/Star";
-import AddToCart from "./components/AddToCart";
+import Star from "../components/Star";
+import AddToCart from "../components/AddToCart";
 
 const API = "https://api.pujakaitem.com/api/products";
 
