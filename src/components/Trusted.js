@@ -23,7 +23,7 @@ const Trusted = () => {
           </div>
           <div className="slide">
             <img
-              src="https://miro.medium.com/v2/resize:fit:1400/1*GRhcmiHwrJkIv2024vIh2A.png"
+              src="https://www.edge-ai-vision.com/wp-content/uploads/2020/01/logo_qualcomm-1024x512.png"
               alt="trusted-brands"
             />
           </div>
