@@ -11,14 +11,14 @@ const Home = () => {
     name: "Attire",
   };
   return (
-    <>
+    <Wrapper>
       <HeroSection myData={data} />
       <FeatureProducts />
       <Services />
       <Trusted />
       <Footer />
 
-    </>
+    </Wrapper>
   );
 
 
