@@ -10,6 +10,9 @@ import ErrorPage from "./pages/ErrorPage";
 import { GlobalStyle } from "./GlobalStyle";
 import { ThemeProvider } from "styled-components";
 import Header from "./components/Header";
+import Login from "./pages/Login";
+import Logout from "./pages/Logout";
+import Signup from "./pages/Signup";
 
 const App = () => {
   const theme = {
@@ -50,6 +53,9 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/singleproduct/:id" element={<SingleProduct />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/logout" element={<Logout />} />
+            <Route path="/signup" element={<Signup />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
         </Router>
