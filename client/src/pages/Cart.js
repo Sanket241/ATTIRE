@@ -4,8 +4,10 @@ import CartItem from "../components/CartItem";
 import { NavLink } from "react-router-dom";
 import {Button} from "../styles/Button";
 import FormatPrice from "../helpers/FormatPrice";
+import {useNavigate} from "react-router-dom";
 
 const Cart = () => {
+  const Navigate = useNavigate();
   const { cart, clearCart, total_price, shipping_fee  } = useCartContext();
   // console.log("🚀 ~ file: Cart.js ~ line 6 ~ Cart ~ cart", cart);
   console.log(cart)
@@ -35,7 +37,7 @@ const Cart = () => {
             clear cart
           </Button>
         </div>
-        <Button className="btn btn-clear setme" onClick={clearCart}>
+        <Button className="btn btn-clear setme" onClick={()=>Navigate('/ordering')} >
             Place order
           </Button>
 

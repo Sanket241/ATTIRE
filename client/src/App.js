@@ -13,6 +13,8 @@ import Header from "./components/Header";
 import Login from "./pages/Login";
 import Logout from "./pages/Logout";
 import Signup from "./pages/Signup";
+import Ordering from "./pages/Ordering";
+
 
 
 const App = () => {
@@ -58,6 +60,7 @@ const App = () => {
             <Route path="/logout" element={<Logout />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="*" element={<ErrorPage />} />
+            <Route path="/ordering" element={<Ordering />} />
           </Routes>
      
         </Router>
