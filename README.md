@@ -1,6 +1,6 @@
 ## ATTIRE: Your Fashion Destination
 
-** Welcome to ATTIRE, your ultimate fashion destination! ATTIRE is a sleek and modern e-commerce platform built on the React framework. Offering a seamless shopping experience, ATTIRE brings together the latest trends and styles in clothing, accessories, and more.
+Welcome to ATTIRE, your ultimate fashion destination! ATTIRE is a sleek and modern e-commerce platform built on the React framework. Offering a seamless shopping experience, ATTIRE brings together the latest trends and styles in clothing, accessories, and more.
 
 ## Features:
 
@@ -19,7 +19,7 @@ ATTIRE leverages the following technologies to deliver a cutting-edge shopping e
 
 - **Frontend**: Built entirely on the React framework, ATTIRE offers a dynamic and interactive user interface.
 
--**Backend**: For secure authentication and user management, ATTIRE utilizes a backend built on the MERN (MongoDB, Express.js, React, Node.js) stack.
+- **Backend**: For secure authentication and user management, ATTIRE utilizes a backend built on the MERN (MongoDB, Express.js, React, Node.js) stack.
  
  - **Database**: MongoDB serves as the database backbone, providing a robust and scalable solution for storing user data and product information.
 
