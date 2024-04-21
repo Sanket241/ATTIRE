@@ -35,7 +35,7 @@ const Signup = () => {
     console.log(data)
     if (res.status === 200) {
       alert("Successfully created")
-      setTokeninLs(data.token)
+      // setTokeninLs(data.token)
       navigate('/login')
     }
 
