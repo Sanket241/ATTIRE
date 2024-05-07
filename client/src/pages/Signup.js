@@ -64,6 +64,7 @@ const Signup = () => {
                   id="fname"
                   value={user.fname}
                   onChange={handleInput}
+                  placeholder="Full name"
                 />
               </div>
               <div className="form_data">
@@ -74,6 +75,7 @@ const Signup = () => {
                   id="email"
                   value={user.email}
                   onChange={handleInput}
+                  placeholder="Email address"
                 />
               </div>
               <div className="form_data">
@@ -84,6 +86,7 @@ const Signup = () => {
                   id="mobile"
                   value={user.mobile}
                   onChange={handleInput}
+                  placeholder="Mobile no"
                 />
               </div>
               <div className="form_data">
