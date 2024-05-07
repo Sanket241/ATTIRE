@@ -4,12 +4,13 @@ const User = require('../models/Model')
 
 const signup=async(req,resp)=>{
     try {
-        const { fname,email,mobile,password,cpassword } = req.body;
+        const { fname,email,mobile,password } = req.body;
         const findmail = await User.findOne({email:email})
         if(findmail){
             return resp.status(400).json({msg:"Email already exists"})
         }
-        const response = await User.create({fname,email,mobile,password,cpassword })
+    
+        const response = await User.create({fname,email,mobile,password })
         console.log(response)
         resp.status(200).json({msg:"Successfully created", token : await response.generateToken() })
 

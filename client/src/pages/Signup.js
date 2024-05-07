@@ -94,17 +94,7 @@ const Signup = () => {
                   id="password"
                   value={user.password}
                   onChange={handleInput}
-                  placeholder="At least 6 characters"
-                />
-              </div>
-              <div className="form_data">
-                <label htmlFor="cpassword">Confirm Password</label>
-                <input
-                  type="password"
-                  name="cpassword"
-                  id="cpassword"
-                  value={user.cpassword}
-                  onChange={handleInput}
+                  placeholder="Password"
                 />
               </div>
               <button type="submit" className="signin_btn">

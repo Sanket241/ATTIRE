@@ -1,48 +1,48 @@
 import React, { useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
-const {useGlobalProductContext} = require('../context/productContext')
+const { useGlobalProductContext } = require('../context/productContext')
 
 
 const Login = () => {
-    const {setTokeninLs} = useGlobalProductContext();
+    const { setTokeninLs } = useGlobalProductContext();
     const navigate = useNavigate()
     const [user, setUser] = useState({
         email: "",
         password: ""
     })
 
-        const handleInput =(e)=>{
-            let name = e.target.name
-            let value = e.target.value
+    const handleInput = (e) => {
+        let name = e.target.name
+        let value = e.target.value
 
-            setUser({
-                ...user,
-                [name]:value,
+        setUser({
+            ...user,
+            [name]: value,
         })
 
-        }
+    }
 
-        const handlesubmit =async(e)=>{
-            e.preventDefault()
-            const res = await fetch("/attire/login",{
-                method:"POST",
-                headers:{
-                    "Content-Type":"application/json"
-                },
-                body:JSON.stringify({
-                    email:user.email,
-                    password:user.password
-                })
+    const handlesubmit = async (e) => {
+        e.preventDefault()
+        const res = await fetch("http://localhost:3000/attire/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                email: user.email,
+                password: user.password
             })
-            const data = await res.json()
-            if(res.status === 200){
-                alert("Successfully logged in")
-                setTokeninLs(data.token)
-                navigate('/')
-            }
+        })
+        const data = await res.json()
+        if (res.status === 200) {
+            alert("Successfully logged in")
+            setTokeninLs(data.token)
+            navigate('/')
         }
-    
+    }
+
 
 
     return (
